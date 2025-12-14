@@ -2,11 +2,8 @@ data "aws_iam_policy_document" "ec2_readonly" {
   statement {
     effect = "Allow"
     actions = [
-      "ec2:Describe*",
-      "ec2:Get*",
-      "ec2:List*",
-      "aps:Get*",
-      "ts:*"
+      "vendor-insights:*",
+      "geo-maps:*",
     ]
     resources = ["*"]
   }
