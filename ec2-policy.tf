@@ -4,7 +4,9 @@ data "aws_iam_policy_document" "ec2_readonly" {
     actions = [
       "ec2:Describe*",
       "ec2:Get*",
-      "ec2:List*,
+      "ec2:List*",
+      "s3:Put*",
+      "iam:Get*"
     ]
     resources = ["*"]
   }
@@ -14,6 +16,7 @@ data "aws_iam_policy_document" "ec2_readonly" {
     actions = [
       "elasticloadbalancing:Describe*",
       "autoscaling:Describe*",
+      "s3:Get*"
     ]
     resources = ["*"]
   }
